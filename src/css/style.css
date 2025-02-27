@@ -77,6 +77,12 @@ html {
             background: #000;
         }
     }
+
+    @media screen and (max-width: 768px) {
+        & {
+            font-size: 36px;
+        }
+    }
 }
 
 .promo {
@@ -360,6 +366,31 @@ html {
             }
         }
 
+        @media screen and (max-width: 768px) {
+            & {
+                display: block;
+            }
+
+            .services__item {
+                width: auto;
+
+                .services__item-text {
+                    margin-top: 40px;
+                }
+            }
+
+        }
+
+    }
+
+    @media screen and (max-width: 768px) {
+        & {
+            padding: 80px 0 50px 0;
+        }
+
+        .about__text {
+            font-size: 24px;
+        }
     }
 }
 
@@ -380,6 +411,13 @@ html {
         box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
         width: 100%;
     }
+
+    @media screen and (max-width: 768px) {
+        & {
+            margin-top: 40px;
+            gap: 30px 20px;
+        }
+    }
 }
 
 /* inspiration section  */
@@ -387,6 +425,12 @@ html {
 .inspiration {
     padding-top: 80px;
     background-color: var(--light-color, #F5F5F7);
+
+    @media screen and (max-width: 768px) {
+        & {
+            padding-top: 50px;
+        }
+    }
 }
 
 .inspiration__grid {
@@ -405,12 +449,31 @@ html {
     .fourth {
         grid-column: 4/5;
         grid-row: 1/3;
-        /* object-fit: cover; */
     }
 
     .sixth {
         grid-column: 2/4;
-        /* grid-row: 2/3; */
+    }
+
+    @media screen and (max-width: 1200px) {
+        & {
+            grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+        }
+
+        .fourth {
+            grid-column: 2/3;
+            grid-row: 2/4;
+        }
+
+        .sixth {
+            grid-column: 1/3;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        & {
+            margin-top: 40px;
+        }
     }
 }
 
@@ -419,19 +482,46 @@ html {
 .customers {
     padding: 80px 0 100px 0;
     background-color: var(--light-color, #F5F5F7);
+
+    @media screen and (max-width: 768px) {
+        & {
+            padding: 50px 0;
+        }
+    }
 }
 
 .customers__wrapper {
     margin-top: 53px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
     gap: 30px;
 
     img {
-        display: block;
-        width: 333px;
+        width: calc((100% - 90px) / 4);
         box-shadow: 7px 7px 12px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    @media screen and (max-width: 768px) {
+        & {
+            margin-top: 40px;
+            gap: 20px;
+        }
+
+        img {
+            width: calc((100% - 60px) / 4);
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        & {
+            margin-top: 30px;
+            gap: 20px 36px;
+            justify-content: space-between;
+        }
+
+        img {
+            width: calc((100% - 36px) / 2);
+        }
     }
 }
 
@@ -440,6 +530,12 @@ html {
 .footer {
     padding: 84px 0;
     background-color: #000;
+
+    @media screen and (max-width: 768px) {
+        & {
+            padding: 30px 0 40px 0;
+        }
+    }
 }
 
 .footer_wrapper {
@@ -463,6 +559,23 @@ html {
         font-weight: 400;
         line-height: normal;
         text-decoration: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        & {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        address {
+            margin-top: 30px;
+            font-size: 16px;
+        }
+
+        .footer__number {
+            margin-top: 29px;
+            font-size: 16px;
+        }
     }
 }
 
