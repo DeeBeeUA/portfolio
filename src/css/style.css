@@ -83,6 +83,12 @@ html {
             font-size: 36px;
         }
     }
+
+    @media screen and (max-width: 375px) {
+        & {
+            font-size: 24px;
+        }
+    }
 }
 
 .promo {
@@ -362,6 +368,13 @@ html {
                         background: url('../icons/pen.svg') center center / cover no-repeat;
                     }
 
+                    @media screen and (max-width: 375px) {
+                        & {
+                            font-size: 14px;
+                            margin-top: 5px;
+                        }
+                    }
+
                 }
             }
         }
@@ -376,9 +389,25 @@ html {
 
                 .services__item-text {
                     margin-top: 40px;
+                    font-size: 12px;
+                    letter-spacing: 0.24px;
                 }
             }
 
+        }
+
+        @media screen and (max-width: 375px) {
+            & {
+                margin-top: 20px;
+            }
+
+            .services__item {
+                width: auto;
+
+                .services__item-text {
+                    margin-top: 20px;
+                }
+            }
         }
 
     }
@@ -387,9 +416,15 @@ html {
         & {
             padding: 80px 0 50px 0;
         }
+    }
+
+    @media screen and (max-width: 375px) {
+        & {
+            padding: 50px 0;
+        }
 
         .about__text {
-            font-size: 24px;
+            font-size: 16px;
         }
     }
 }
@@ -416,6 +451,14 @@ html {
         & {
             margin-top: 40px;
             gap: 30px 20px;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        & {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1fr) 1.5fr;
+            row-gap: 30px;
         }
     }
 }
@@ -473,6 +516,22 @@ html {
     @media screen and (max-width: 768px) {
         & {
             margin-top: 40px;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        & {
+            grid-template: repeat(3, 0.9fr) 2.1fr 0.9fr 0.4fr / 1fr;
+            gap: 20px;
+        }
+
+        .fourth {
+            grid-column: auto;
+            grid-row: auto;
+        }
+
+        .sixth {
+            grid-column: auto;
         }
     }
 }
@@ -573,8 +632,18 @@ html {
         }
 
         .footer__number {
-            margin-top: 29px;
+            margin-top: 30px;
             font-size: 16px;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        & {
+            align-items: center
+        }
+
+        address {
+            order: 1;
         }
     }
 }
